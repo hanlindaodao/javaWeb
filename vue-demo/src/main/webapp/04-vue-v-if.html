@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <div v-if="count == 3">div1</div>
+    <div v-else-if="count == 4">div2</div>
+    <div v-else>div3</div>
+
+    <hr>
+    <div v-show="count == 3">div v-show</div>
+
+    <br>
+
+    <input v-model="count">
+</div>
+
+<script src="js/vue.js"></script>
+
+<script>
+
+    new Vue({
+        el:"#app",
+        data() {
+            return {
+                username:"",
+                url:"https://www.baidu.com",
+                count:3
+            }
+        },
+        methods:{
+            show() {
+                alert("我被点击了")
+            }
+        }
+        // data:function () {
+        //     return {
+        //         username:""
+        //     }
+        // }
+    });
+
+</script>
+
+</body>
+</html>
